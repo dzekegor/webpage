@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main.css') }}">
+    <title>Партия толерантности</title>
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <img class="custom_logo" src="../static/smile.png" alt="Партия Толерантности">
+      <h1>ПАРТИЯ ТОЛЕРАНТНОСТИ</h1>
+      <div></div>
+      <h1 id="deviz">Мы приняли тебя!</h1>
+    </header>
+    <main>
+      <h1>Осталась совсем малость. Подпишись на нас в соцсетях!</h1>
+      <article class="join_us">
+        <h2>ВКонтакте</h2>
+        <a href="https://vk.com/tolerancecorner">
+          <img src="../static/vk.png" alt="ВК">
+        </a>
+      </article>
+      <article class="join_us">
+        <h2>Дзен</h2>
+        <a href="https://zen.yandex.ru/tolerancecorner">
+          <img src="../static/zen.png" alt="Дзен">
+        </a>
+      </article>
+      <article class="join_us">
+        <h2>Телеграм</h2>
+        <a href="https://t.me/tolerancecorner">
+          <img src="../static/tg.png" alt="Телеграм">
+        </a>
+      </article>
+    </main>
+    <footer>
+      <p>Hostname: {{ name }}</p>
+    </footer>
+  </body>
+</html>

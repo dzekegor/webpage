@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/main.css') }}">
+    <title>Партия толерантности</title>
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <img class="custom_logo" src="../static/logo.png" alt="Партия Толерантности">
+      <h1>ПАРТИЯ ТОЛЕРАНТНОСТИ</h1>
+      <div></div>
+      <h1 id="deviz">Мы примем тебя любым!</h1>
+      <form action="/join/" method="post">
+        <fieldset>
+          <input id="join" type="checkbox" name="join">
+          <label for="join">Стать участником</label>
+        </fieldset>
+        <button type="submit" name="join" value="join">Подать заявление</button>
+      </form>
+
+    </header>
+    <main>
+
+    </main>
+    <footer>
+      <p>Hostname: {{ name }}</p>
+    </footer>
+  </body>
+</html>
