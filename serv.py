@@ -5,7 +5,7 @@ app = Flask(__name__,static_folder="static",template_folder="jinja_templates")
 @app.route('/')
 def index():
     if not request.cookies.get('joined'):
-        return render_template("join.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
+        return render_template("index.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
         #return render_template("index.html",name=os.environ.get('HOSTNAME'))
     else:
         return render_template("join.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
@@ -26,13 +26,13 @@ def join():
         else:
             res = make_response(redirect("/join/"))
             res.set_cookie('joined', 'true', 0)
-            return render_template("join.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
+            return render_template("not_joined.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
             #return render_template("not_joined.html",name=os.environ.get("HOSTNAME"))
     else:
         if request.cookies.get('joined') is None:
             res = make_response(redirect("/join/"))
             res.set_cookie('joined', 'true', 0)
-            return render_template("join.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
+            return render_template("not_joined.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
             #return render_template("not_joined.html",name=os.environ.get("HOSTNAME"))
         else:
             return render_template("join.html",name=socket.gethostbyname(os.environ.get("HOSTNAME")))
